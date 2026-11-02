@@ -1,0 +1,4 @@
+# 可选：只有启用向量检索时才需要
+onnxruntime>=1.16
+tokenizers>=0.15
+numpy>=1.24
