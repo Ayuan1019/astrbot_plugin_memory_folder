@@ -1,0 +1,8 @@
+name: astrbot_plugin_memory_folder
+display_name: 长期记忆（档案+事件+原话）
+desc: 定期把聊天蒸馏成记忆文件，用关键词+向量+时间复式检索；记得住"我们之间发生过什么"
+help: 蒸馏出人物档案、事件线和每日梗；聊天前自动召回；支持跨群且标注来源
+version: 1.1.0
+author: Ayuan1019
+repo: https://github.com/Ayuan1019/astrbot_plugin_memory_folder
+astrbot_version: ">=4.11.0"
