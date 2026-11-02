@@ -1,0 +1,78 @@
+{
+  "distill_min_msgs": {
+    "description": "攒够多少条消息触发一次记忆蒸馏",
+    "type": "int",
+    "default": 300,
+    "hint": "太小会频繁烧 token，太大记忆更新慢"
+  },
+  "distill_batch": {
+    "description": "单次蒸馏最多处理多少条",
+    "type": "int",
+    "default": 300
+  },
+  "distill_interval_sec": {
+    "description": "两次蒸馏之间的最小间隔（秒）",
+    "type": "int",
+    "default": 1800
+  },
+  "distill_daily_sec": {
+    "description": "多久没蒸馏就强制蒸一次（秒）",
+    "type": "int",
+    "default": 86400
+  },
+  "recall_top_k": {
+    "description": "每次回忆最多注入多少条记忆",
+    "type": "int",
+    "default": 12
+  },
+  "context_soft_limit": {
+    "description": "上下文超过多少条就压缩",
+    "type": "int",
+    "default": 130
+  },
+  "startup_review": {
+    "description": "上线回看：启动后翻旧消息补一句",
+    "type": "bool",
+    "default": false
+  },
+  "startup_send": {
+    "description": "上线回看的结果要不要真发（要 startup_review 也开着）",
+    "type": "bool",
+    "default": false
+  },
+  "startup_confidence": {
+    "description": "上线回看的最低置信度",
+    "type": "float",
+    "default": 0.6
+  },
+  "group_names": {
+    "description": "会话 id → 群名（填了回忆时才会显示群名，不填显示数字）",
+    "type": "object",
+    "default": {}
+  },
+  "owner_names": {
+    "description": "哪些人的档案同时写进全局（填昵称数组）",
+    "type": "list",
+    "default": []
+  },
+  "event_keys": {
+    "description": "哪些会话要额外提炼事件线（填会话 id 数组）",
+    "type": "list",
+    "default": []
+  },
+  "enable_vector": {
+    "description": "启用向量检索（需要先把 bge-small-zh 模型放进 vec_model 目录）",
+    "type": "bool",
+    "default": true
+  },
+  "vec_min_similarity": {
+    "description": "向量命中最低相似度",
+    "type": "float",
+    "default": 0.55
+  },
+  "tastes_file": {
+    "description": "口味文件路径（留空用默认）",
+    "type": "string",
+    "default": ""
+  }
+}
